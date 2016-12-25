@@ -20,10 +20,10 @@ $tahun = date("Y", $today); // grab one year from today
   <!-- Showing months -->
   <select name="month">
   <?php /* Create a list of options for the month */
-  // awal looping
+  // early looping
   for ($n=1; $n <= 12 ; $n++) { ?>
   <option value="<?php echo $n; ?>" > <?php echo $monthname[$n]; ?> </option>
-  <?php } // akhir looping?>
+  <?php } // end looping?>
   </select>
  
   <!-- displays the day -->
