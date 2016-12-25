@@ -1,7 +1,7 @@
 <?php
 /*
-*  Nama Program  : form_tanggal.php
-*  Deskripsi  : kode untuk menampilkan pilihan berupa tanggal, bulan, tahun
+*  Program Name: form_date.php
+*  Description: code to display the choice of either the date, month, year
 **/
  
 $namaBulan = array(
@@ -14,29 +14,29 @@ $tahun = date("Y", $hariIni); // ambil tahun dari hari ini
  
 ?>
  
-  <h3>Hari ini Tanggal <?php echo $f_hari; ?></h3>
+  <h3>Today's Date <?php echo $f_hari; ?></h3>
  
   <form action="" method="get" accept-charset="utf-8">
-  <!-- Menampilkan bulan -->
+  <!-- Showing months -->
   <select name="bulan">
-  <?php /* Buat daftar pilihan untuk bulan */
+  <?php /* Create a list of options for the month */
   // awal looping
   for ($n=1; $n <= 12 ; $n++) { ?>
   <option value="<?php echo $n; ?>" > <?php echo $namaBulan[$n]; ?> </option>
   <?php } // akhir looping?>
   </select>
  
-  <!-- menampilkan hari -->
-  <select name="hari" >
-  <?php /* Buat daftar pilihan untuk hari */
+  <!-- displays the day -->
+  <select name="day" >
+  <?php /* Create a list of options for day */
   for ($n=1; $n <= 31 ; $n++) { ?>
   <option value="<?php echo $n; ?>" > <?php echo $n; ?> </option>
   <?php } ?>
   </select>
  
-  <!-- menampilkan tahun -->
-  <select name="tahun" >
-  <?php /* Buat daftar pilihan untuk tahun */
+  <!-- featuring year -->
+  <select name="year" >
+  <?php /* Create a list of options for the year */
   for ($n= $tahun - 4; $n <= $tahun+5 ; $n++) { ?>
   <option value="<?php echo $n; ?>" > <?php echo $n; ?> </option>
   <?php } ?>
