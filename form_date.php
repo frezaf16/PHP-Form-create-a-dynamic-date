@@ -4,9 +4,9 @@
 *  Description: code to display the choice of either the date, month, year
 **/
  
-$namaBulan = array(
-  1 => "Januari", "Februari", "Maret", "April", "Mei", "Juni",
-  "Juli", "Agustus",  "September", "Oktober",  "November", "Desember"
+$Monthname = array(
+  1 => "January", "February", "March", "April", "May", "Juny",
+  "July", "August",  "September", "October",  "November", "December"
   );
 $hariIni = time(); // save the date today
 $f_hari = date("M-d-Y", $today); // the format of today's date
@@ -18,7 +18,7 @@ $tahun = date("Y", $today); // grab one year from today
  
   <form action="" method="get" accept-charset="utf-8">
   <!-- Showing months -->
-  <select name="bulan">
+  <select name="month">
   <?php /* Create a list of options for the month */
   // awal looping
   for ($n=1; $n <= 12 ; $n++) { ?>
