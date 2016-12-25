@@ -8,13 +8,13 @@ $namaBulan = array(
   1 => "Januari", "Februari", "Maret", "April", "Mei", "Juni",
   "Juli", "Agustus",  "September", "Oktober",  "November", "Desember"
   );
-$hariIni = time(); // menyimpan tanggal hari ini
-$f_hari = date("M-d-Y", $hariIni); // format tanggal hari ini
-$tahun = date("Y", $hariIni); // ambil tahun dari hari ini
+$hariIni = time(); // save the date today
+$f_hari = date("M-d-Y", $today); // the format of today's date
+$tahun = date("Y", $today); // grab one year from today
  
 ?>
  
-  <h3>Today's Date <?php echo $f_hari; ?></h3>
+  <h3>Today's Date <?php echo $f_date; ?></h3>
  
   <form action="" method="get" accept-charset="utf-8">
   <!-- Showing months -->
@@ -22,7 +22,7 @@ $tahun = date("Y", $hariIni); // ambil tahun dari hari ini
   <?php /* Create a list of options for the month */
   // awal looping
   for ($n=1; $n <= 12 ; $n++) { ?>
-  <option value="<?php echo $n; ?>" > <?php echo $namaBulan[$n]; ?> </option>
+  <option value="<?php echo $n; ?>" > <?php echo $monthname[$n]; ?> </option>
   <?php } // akhir looping?>
   </select>
  
